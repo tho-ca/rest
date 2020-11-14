@@ -32,7 +32,6 @@ class RestServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                InstallRestPackage::class,
                 MakeRestCommand::class,
                 MakeRestModelCommand::class,
                 MakeRestResourceCommand::class,
