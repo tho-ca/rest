@@ -13,7 +13,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "thoca\\rest\\RestServiceProvider"
+                "Thoca\\Rest\\RestServiceProvider"
             ]
         }
     },
