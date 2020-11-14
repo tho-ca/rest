@@ -1,0 +1,19 @@
+{
+    "name": "thoca/rest",
+    "description": "Rest - A simple api rest code generator.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thobias Vicente",
+            "email": "thobiascontact@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Thoca\\Rest\\": "src/"
+        }
+    },
+    "require": {}
+}
