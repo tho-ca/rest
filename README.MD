@@ -24,7 +24,7 @@ php artisan make: rest Post
     <h2>Model Created:</h2>
 </div>
 
-```bash
+```php
 <?php
 
 namespace App\Models;
@@ -43,7 +43,7 @@ class Post extends Model
     <h2>Resource Created</h2>
 </div>
 
-```bash
+```php
 <?php
 
 namespace App\Http\Resources;
@@ -72,7 +72,7 @@ class PostResource extends JsonResource
     <h2>Repository Created:</h2>
 </div>
 
-```bash
+```php
 <?php
 
 namespace App\Repositories;
@@ -149,7 +149,7 @@ class PostRepository extends AbstractRepository
     <h2>Request Created:</h2>
 </div>
 
-```bash
+```php
 <?php
 
 namespace App\Http\Requests;
@@ -187,7 +187,7 @@ class PostRequest extends FormRequest
     <h2>Controller Created:</h2>
 </div>
 
-```bash
+```php
 <?php
 
 namespace App\Http\Controllers;
