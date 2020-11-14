@@ -19,7 +19,7 @@ class MakeRestCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Command will generate a full REST API CRUD';
 
     /**
      * Create a new command instance.

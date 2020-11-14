@@ -22,7 +22,7 @@ class MakeRestAbstractRepositoryCommand extends GeneratorCommand
      */
     protected $description = 'Command description';
 
-    protected $type = 'Repository';
+    protected $type = 'Abstract Repository';
 
     protected function getStub()
     {
