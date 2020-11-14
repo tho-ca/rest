@@ -1,17 +1,6 @@
-## Laravel Package to Generate a REST API CRUD
+# A easier solution to create a REST API CRUD
 
-This package generates a laravel repository pattern template with a complete CRUD thats speeds up your codding.
-
-
-### Install
-
-```bash
-composer require thoca/rest
-```
-
-### Usage
-
-You can use the laravel artisan command like the example bellow.
+This Laravel package generates a repository pattern model with a complete CRUD that speeds up your coding. The package will take care of delivering you a model, resource, repository, request and controller all at once, all you need to do is execute the command:
 
 ```bash
 php artisan make: rest Post
@@ -20,10 +9,15 @@ php artisan make: rest Post
     <img alt="Demo on Vercel" src="https://i.imgur.com/e3YQKeM.png">
 </p>
 
-### Preview
-<div>
-    <h2>Model Created:</h2>
-</div>
+## Install
+
+```bash
+composer require thoca/rest
+```
+
+## Preview
+
+### Result Model
 
 ```php
 <?php
@@ -40,9 +34,7 @@ class Post extends Model
 }
 ```
 
-<div>
-    <h2>Resource Created</h2>
-</div>
+### Result Resource
 
 ```php
 <?php
@@ -69,9 +61,7 @@ class PostResource extends JsonResource
 }
 ```
 
-<div>
-    <h2>Repository Created:</h2>
-</div>
+### Result Repository
 
 ```php
 <?php
@@ -146,9 +136,7 @@ class PostRepository extends AbstractRepository
     }
 }
 ```
-<div>
-    <h2>Request Created:</h2>
-</div>
+### Result Request
 
 ```php
 <?php
@@ -184,9 +172,7 @@ class PostRequest extends FormRequest
 }
 ```
 
-<div>
-    <h2>Controller Created:</h2>
-</div>
+### Result Controller
 
 ```php
 <?php
@@ -276,6 +262,6 @@ class PostController extends Controller
 ```
 
 
-### License
+## License
 
-The Laravel 8 Packages's Readme File(Docs) Viewer is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The MIT License (MIT). Please see [License](http://opensource.org/licenses/MIT) for more information. 
