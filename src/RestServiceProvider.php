@@ -3,6 +3,7 @@
 namespace Thoca\Rest;
 
 use Illuminate\Support\ServiceProvider;
+use Thoca\Rest\Commands\MakeRestAbstractRepositoryCommand;
 use Thoca\Rest\Commands\MakeRestCommand;
 use Thoca\Rest\Commands\MakeRestControllerCommand;
 use Thoca\Rest\Commands\MakeRestModelCommand;
@@ -35,6 +36,7 @@ class RestServiceProvider extends ServiceProvider
                 MakeRestCommand::class,
                 MakeRestModelCommand::class,
                 MakeRestResourceCommand::class,
+                MakeRestAbstractRepositoryCommand::class,
                 MakeRestRepositoryCommand::class,
                 MakeRestRequestCommand::class,
                 MakeRestControllerCommand::class,

@@ -3,9 +3,8 @@
 namespace Thoca\Rest\Commands;
 
 use Illuminate\Console\GeneratorCommand;
-use Illuminate\Support\Str;
 
-class MakeRestReposMakeRestAbstractRepositoryCommanditoryCommand extends GeneratorCommand
+class MakeRestAbstractRepositoryCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
