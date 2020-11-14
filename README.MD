@@ -10,7 +10,7 @@ composer require thoca/rest
 
 ### Usage
 
-You can simples use the laravel artisan command, passing the Model Name.
+You can use the laravel artisan command passing the Model Name.
 
 ```bash
 php artisan make: rest Post
