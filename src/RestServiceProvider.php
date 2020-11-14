@@ -9,6 +9,7 @@ use Thoca\Rest\Commands\MakeRestModelCommand;
 use Thoca\Rest\Commands\MakeRestRepositoryCommand;
 use Thoca\Rest\Commands\MakeRestRequestCommand;
 use Thoca\Rest\Commands\MakeRestResourceCommand;
+use Thoca\Rest\Console\InstallRestPackage;
 
 class RestServiceProvider extends ServiceProvider
 {
@@ -19,14 +20,7 @@ class RestServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->commands([
-            MakeRestCommand::class,
-            MakeRestModelCommand::class,
-            MakeRestResourceCommand::class,
-            MakeRestRepositoryCommand::class,
-            MakeRestRequestCommand::class,
-            MakeRestControllerCommand::class,
-        ]);
+        //
     }
 
     /**
@@ -36,6 +30,16 @@ class RestServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                InstallRestPackage::class,
+                MakeRestCommand::class,
+                MakeRestModelCommand::class,
+                MakeRestResourceCommand::class,
+                MakeRestRepositoryCommand::class,
+                MakeRestRequestCommand::class,
+                MakeRestControllerCommand::class,
+            ]);
+        }
     }
 }
