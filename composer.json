@@ -10,6 +10,13 @@
         }
     ],
     "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "thoca\\rest\\RestServiceProvider"
+            ]
+        }
+    },
     "autoload": {
         "psr-4": {
             "Thoca\\Rest\\": "src/"
