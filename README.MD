@@ -10,7 +10,7 @@ composer require thoca/rest
 
 ### Usage
 
-You can use the laravel artisan command the example bellow.
+You can use the laravel artisan command like the example bellow.
 
 ```bash
 php artisan make: rest Post
