@@ -1,4 +1,4 @@
-## Thoca a Laravel Package to Generate a REST API CRUD
+## Laravel Package to Generate a REST API CRUD
 
 This package generates a laravel repository pattern with a complete CRUD thats speeds up your codding.
 
