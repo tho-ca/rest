@@ -46,6 +46,9 @@ class MakeRestCommand extends Command
         $this->call('make:rest-resource', [
             'name' => $modelName . 'Resource',
         ]);
+        $this->call('make:rest-abstract-repository', [
+            'name' => $modelName . 'Repository',
+        ]);
         $this->call('make:rest-repository', [
             'name' => $modelName . 'Repository',
         ]);
