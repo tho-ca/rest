@@ -1,6 +1,6 @@
 ## Laravel Package to Generate a REST API CRUD
 
-This package generates a laravel repository pattern with a complete CRUD thats speeds up your codding.
+This package generates a laravel repository pattern template with a complete CRUD thats speeds up your codding.
 
 ### Install
 
