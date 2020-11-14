@@ -14,6 +14,8 @@ class MakeRestRepositoryCommand extends GeneratorCommand
      */
     protected $name = 'make:rest-repository';
 
+    protected $hidden = true;
+
     /**
      * The console command description.
      *
@@ -25,7 +27,7 @@ class MakeRestRepositoryCommand extends GeneratorCommand
 
     protected function getStub()
     {
-        return base_path('vendor/thoca/rest/stubs/Repository.php');
+        return base_path('vendor/thoca/rest/src/stubs/Repository.php');
     }
 
     protected function getPath($name)

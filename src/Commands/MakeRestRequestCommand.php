@@ -14,6 +14,8 @@ class MakeRestRequestCommand extends GeneratorCommand
      */
     protected $name = 'make:rest-request';
 
+    protected $hidden = true;
+
     /**
      * The console command description.
      *
@@ -25,7 +27,7 @@ class MakeRestRequestCommand extends GeneratorCommand
 
     protected function getStub()
     {
-        return base_path('vendor/thoca/rest/stubs/Request.php');
+        return base_path('vendor/thoca/rest/src/stubs/Request.php');
     }
 
     protected function getPath($name)

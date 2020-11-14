@@ -14,6 +14,8 @@ class MakeRestControllerCommand extends GeneratorCommand
      */
     protected $name = 'make:rest-controller';
 
+    protected $hidden = true;
+
     /**
      * The console command description.
      *
@@ -25,7 +27,7 @@ class MakeRestControllerCommand extends GeneratorCommand
 
     protected function getStub()
     {
-        return base_path('vendor/thoca/rest/stubs/Controller.php');
+        return base_path('vendor/thoca/rest/src/stubs/Controller.php');
     }
 
     protected function getPath($name)
