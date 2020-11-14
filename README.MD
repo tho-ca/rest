@@ -2,6 +2,7 @@
 
 This package generates a laravel repository pattern template with a complete CRUD thats speeds up your codding.
 
+
 ### Install
 
 ```bash
