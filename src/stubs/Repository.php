@@ -39,7 +39,7 @@ class DummyClass extends AbstractRepository
     {
         DB::beginTransaction();
         try {
-            $model = ($id) ? $this->find($id) : new DummyModel;
+            $model = ($id) ? $this->find($id) : new DummyModel();
 
             $model->fill($data->all());
 
