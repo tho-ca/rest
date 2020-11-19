@@ -8,21 +8,19 @@ use Illuminate\Support\Facades\DB;
 
 class DummyClass extends AbstractRepository
 {
-    public function all($search, $per_page = null)
+    public function all($search, $perPage = null)
     {
         $query = app(DummyModel::class)->newQuery();
 
         if ($search['term']) {
-            $term = '%' . strtoupper(implode('%', explode(' ', $search['term']))) . '%';
-
-            $query->where('name', 'like', $term);
+            $query->where('name', 'like', '%' . strtoupper($search['term']) . '%');
         }
 
-        if ($per_page) {
-            $query->paginate($per_page);
+        if ($perPage) {
+            $query->paginate($perPage);
         }
 
-        return $query->orderBy('name')->get();
+        return $query->orderBy('id')->get();
     }
 
     public function find($id)
@@ -55,7 +53,7 @@ class DummyClass extends AbstractRepository
             $model = $this->find($id);
 
             $model->delete();
-            
+
             DB::commit();
             return $model;
         } catch (\Exception $e) {

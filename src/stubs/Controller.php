@@ -19,11 +19,10 @@ class DummyClass extends Controller
     public function index(Request $request)
     {
         try {
-
-            $per_page = $request->query('per_page', null);
+            $perPage = $request->query('per_page', null);
             $search = ["term" => $request->query('term', null)];
 
-            return DummyModelResource::collection($this->dummyModelRepository->all($search, $per_page));
+            return DummyModelResource::collection($this->dummyModelRepository->all($search, $perPage));
         } catch (\Exception $e) {
             return response()->json([
                 "message" => "Error.",
