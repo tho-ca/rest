@@ -9,15 +9,21 @@ use App\Repositories\DummyModelRepository;
 
 class DummyClass extends Controller
 {
+    private $dummyModelRepository;
+
+    public function __construct(DummyModelRepository $dummyModelRepository)
+    {
+        $this->dummyModelRepository = $dummyModelRepository;
+    }
+
     public function index(Request $request)
     {
         try {
-            $values = new DummyModelRepository();
 
             $per_page = $request->query('per_page', null);
             $search = ["term" => $request->query('term', null)];
 
-            return DummyModelResource::collection($values->all($search, $per_page));
+            return DummyModelResource::collection($this->dummyModelRepository->all($search, $per_page));
         } catch (\Exception $e) {
             return response()->json([
                 "message" => "Error.",
@@ -29,7 +35,7 @@ class DummyClass extends Controller
     public function store(DummyModelRequest $request)
     {
         try {
-            $model = (new DummyModelRepository)->save($request);
+            $model = $this->dummyModelRepository->save($request);
 
             return response()->json(new DummyModelResource($model), 201);
         } catch (\Exception $e) {
@@ -43,7 +49,7 @@ class DummyClass extends Controller
     public function show($id)
     {
         try {
-            $model = (new DummyModelRepository)->find($id);
+            $model = $this->dummyModelRepository->find($id);
 
             return new DummyModelResource($model);
         } catch (\Exception $e) {
@@ -57,7 +63,7 @@ class DummyClass extends Controller
     public function update(DummyModelRequest $request, $id)
     {
         try {
-            $model = (new DummyModelRepository)->save($request, $id);
+            $model = $this->dummyModelRepository->save($request, $id);
 
             return new DummyModelResource($model);
         } catch (\Exception $e) {
@@ -71,7 +77,7 @@ class DummyClass extends Controller
     public function destroy($id)
     {
         try {
-            $model = (new DummyModelRepository)->delete($id);
+            $model = $this->dummyModelRepository->delete($id);
 
             return new DummyModelResource($model);
         } catch (\Exception $e) {

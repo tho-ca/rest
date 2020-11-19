@@ -43,6 +43,7 @@ class MakeRestControllerCommand extends GeneratorCommand
 
         $modelName = Str::studly(str_replace('Controller', '', $this->argument('name')));
 
-        return str_replace('DummyModel', $modelName, $stub);
+        $stub = str_replace('DummyModel', $modelName, $stub);
+        return str_replace('dummyModel', strtolower($modelName), $stub);
     }
 }
