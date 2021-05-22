@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class DummyClass extends AbstractRepository
 {
+    public function __construct()
+    {
+        parent::__construct(new DummyModel());
+    }
+    
     public function all($search, $perPage = null)
     {
         $query = app(DummyModel::class)->newQuery();
