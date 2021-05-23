@@ -22,7 +22,7 @@ class DummyClass extends AbstractRepository
         }
 
         if ($perPage) {
-            $query->paginate($perPage);
+            return $query->orderBy('id')->paginate($perPage);
         }
 
         return $query->orderBy('id')->get();
