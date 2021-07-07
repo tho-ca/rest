@@ -8,11 +8,21 @@ use Illuminate\Support\Facades\DB;
 
 class DummyClass extends AbstractRepository
 {
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         parent::__construct(new DummyModel());
     }
-    
+
+    /**
+     * Retrieves all DummyModel
+     *
+     * @param string $search
+     * @param number $perPage defaults to null
+     * @return Builder|Builder[]
+     */
     public function all($search, $perPage = null)
     {
         $query = app(DummyModel::class)->newQuery();
@@ -28,11 +38,24 @@ class DummyClass extends AbstractRepository
         return $query->orderBy('id')->get();
     }
 
+    /**
+     * Retrieves a specific DummyModel by ID
+     *
+     * @param number $id
+     * @return DummyModel
+     */
     public function find($id)
     {
         return DummyModel::find($id);
     }
 
+    /**
+     * Stores or update a DummyModel
+     *
+     * @param array $data
+     * @param number $id defaults to null
+     * @return DummyModel
+     */
     public function save($data, $id = null)
     {
         DB::beginTransaction();
@@ -51,6 +74,12 @@ class DummyClass extends AbstractRepository
         }
     }
 
+    /**
+     * Deletes a DummyModel
+     *
+     * @param number $id
+     * @return DummyModel
+     */
     public function delete($id)
     {
         DB::beginTransaction();

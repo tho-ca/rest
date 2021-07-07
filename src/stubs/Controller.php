@@ -9,13 +9,26 @@ use App\Repositories\DummyModelRepository;
 
 class DummyClass extends Controller
 {
+    /** @var class $dummyModelRepository contains the REST methods of DummyModel */
     private $dummyModelRepository;
 
+    /**
+     * Constructor function
+     *
+     * DummyModelRepository $dummyModelRepository
+     */
     public function __construct(DummyModelRepository $dummyModelRepository)
     {
         $this->dummyModelRepository = $dummyModelRepository;
     }
 
+    /**
+     * Retrieves paginated data
+     *
+     * @param Request $request
+     * @return Collection[]
+     * @throws \Exception
+     */
     public function index(Request $request)
     {
         try {
@@ -31,6 +44,13 @@ class DummyClass extends Controller
         }
     }
 
+    /**
+     * Store a new DummyModel
+     *
+     * @param Request $request
+     * @return DummyModel[]
+     * @throws \Exception
+     */
     public function store(DummyModelRequest $request)
     {
         try {
@@ -45,6 +65,13 @@ class DummyClass extends Controller
         }
     }
 
+    /**
+     * Retrieves a DummyModel
+     *
+     * @param number $id
+     * @return DummyModel
+     * @throws \Exception
+     */
     public function show($id)
     {
         try {
@@ -59,6 +86,14 @@ class DummyClass extends Controller
         }
     }
 
+    /**
+     * Updates a DummyModel
+     *
+     * @param DummyModelRequest $request
+     * @param number $id
+     * @return DummyModel
+     * @throws \Exception
+     */
     public function update(DummyModelRequest $request, $id)
     {
         try {
@@ -73,6 +108,13 @@ class DummyClass extends Controller
         }
     }
 
+    /**
+     * Delete a DummyModel
+     *
+     * @param number $id
+     * @return DummyModel
+     * @throws \Exception
+     */
     public function destroy($id)
     {
         try {
