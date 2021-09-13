@@ -3,7 +3,7 @@
 This Laravel package generates a repository pattern model with a complete CRUD that speeds up your coding. The package will take care of delivering you a model, resource, repository, request and controller all at once, all you need to do is execute the command:
 
 ```bash
-php artisan make: rest Post
+php artisan make:rest Post
 ```
 <p align="left">
     <img alt="Demo on Vercel" src="https://i.imgur.com/e3YQKeM.png">
