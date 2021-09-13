@@ -28,7 +28,7 @@ class DummyClass extends AbstractRepository
         $query = app(DummyModel::class)->newQuery();
 
         if ($search['term']) {
-            $query->where('name', 'like', '%' . strtoupper($search['term']) . '%');
+            $query->whereRaw("upper(name) LIKE '%" . strtoupper($search['name']) . "%'");
         }
 
         if ($perPage) {
